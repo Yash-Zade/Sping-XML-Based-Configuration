@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="org.example.User" autowire="byName">
+<!--        <property name="com" ref="com1"/>-->
+    </bean>
+<!--As we used primary keyword here it will be considered as the more prior even autowired is byName-->
+    <bean id="com1" class="org.example.Laptop" primary="true">
+    </bean>
+
+    <bean id="com" class="org.example.Desktop">
+    </bean>
+
+
+
+</beans>
